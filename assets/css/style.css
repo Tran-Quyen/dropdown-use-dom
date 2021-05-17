@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.dropdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #2196f3;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+ul {
+  position: absolute;
+  width: 100%;
+  background-color: #ccc;
+  list-style-type: none;
+  /* Lật list ra sau vuông góc với btn */
+  transform-origin: top;
+  transform: perspective(1000px) rotateX(-90deg);
+  transition: 0.5s;
+}
+
+ul.active {
+  transform: perspective(1000px) rotateX(0deg);
+}
+
+ul li a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #262626;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+ul li a:hover {
+  background-color: #0d7ad0;
+}
